@@ -2,3 +2,4 @@ pyautogen
 openai
 matplotlib
 wordcloud
+streamlit

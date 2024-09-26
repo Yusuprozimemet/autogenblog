@@ -7,7 +7,7 @@ import json
 
 llm_config = {
     "model": "gpt-4o-mini",
-    "api_key": "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"
+    "api_key": "sk-s64HzGGAq7Sm_dblcr7kf3ZclJ4Sr3tLyLCNw5G0BGT3BlbkFJG6BCNPuwNymr0ropj5-AlICHeCUQbcK_DZrtxOkkgA"
 }
 
 # Ensure the 'coding' folder exists
@@ -33,7 +33,7 @@ writing_tasks = [
     1. An executive summary of the current state of RNA research
     2. Detailed sections on each of the five focus areas, highlighting key findings and breakthroughs
     3. Analysis of trends and emerging topics in RNA research
-    4. Visualizations created during the research process, include the rna_trends_wordcloud.png and rna_research_trends.png
+    4. Visualizations created during the research process, include the rna_trends_wordcloud.png
     5. A section on future directions and potential applications of RNA research
     6. A bibliography of all papers referenced in the report
     Ensure that the report is well-structured, engaging, and accessible to a scientific audience with a background in molecular biology."""
