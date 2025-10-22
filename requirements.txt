@@ -1,5 +1,9 @@
-pyautogen
+streamlit
 openai
+pyautogen
 matplotlib
 wordcloud
-streamlit
+yfinance
+pandas
+numpy
+python-dotenv

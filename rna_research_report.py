@@ -1,13 +1,21 @@
+
 import autogen
 import os
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 import random
 import json
+from dotenv import load_dotenv
+load_dotenv()
+
+# Load API key from environment variable
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+if not OPENAI_API_KEY:
+    raise RuntimeError("⚠️ OpenAI API key not found. Please set the OPENAI_API_KEY environment variable.")
 
 llm_config = {
     "model": "gpt-4o-mini",
-    "api_key": "sk-s64HzGGAq7Sm_dblcr7kf3ZclJ4Sr3tLyLCNw5G0BGT3BlbkFJG6BCNPuwNymr0ropj5-AlICHeCUQbcK_DZrtxOkkgA"
+    "api_key": OPENAI_API_KEY
 }
 
 # Ensure the 'coding' folder exists

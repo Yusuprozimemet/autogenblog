@@ -1,8 +1,11 @@
 import streamlit as st
 from openai import OpenAI
 import time
+import os
 from styles.main import load_css
 from functions.utils import initialize_session_state, clear_chat_history, start_new_chat, add_message_to_history, get_current_chat_messages, get_chat_list
+from dotenv import load_dotenv
+load_dotenv()
 
 # Set page config as the first Streamlit command
 st.set_page_config(page_title="AI Chat Assistant", page_icon="🤖", layout="wide")
@@ -13,10 +16,15 @@ st.markdown(load_css(), unsafe_allow_html=True)
 # Initialize session state
 initialize_session_state()
 
-# LLM configuration
+# LLM configuration with environment variable
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+if not OPENAI_API_KEY:
+    st.error("⚠️ OpenAI API key not found. Please set the OPENAI_API_KEY environment variable.")
+    st.stop()
+
 llm_config = {
     "model": "gpt-4o-mini",
-    "api_key": "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"
+    "api_key": OPENAI_API_KEY
 }
 
 # Initialize OpenAI client
