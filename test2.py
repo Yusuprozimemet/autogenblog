@@ -9,7 +9,7 @@ if not os.path.exists("coding"):
 
 llm_config = {
     "model": "gpt-4o-mini",
-    "api_key": "sk-s64HzGGAq7Sm_dblcr7kf3ZclJ4Sr3tLyLCNw5G0BGT3BlbkFJG6BCNPuwNymr0ropj5-AlICHeCUQbcK_DZrtxOkkgA"
+    "api_key": " YOUR_OPENAI_API_KEY_HERE"
 }
 
 writing_tasks = [
